@@ -10,6 +10,19 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Laila', serif;
+}
+
+h1, h2 {
+	font-family: 'Laila', serif;
+}
+
+.float-right {
+	float: right !important;
+}
+	
+.container {
+	width: 100%;
 }
 
 /* padded section */
@@ -35,7 +48,7 @@ html, body {
 
 /* additional sections */
 #home {
-  background: url(../images/home.jpg) no-repeat center center fixed; 
+  background: #2893ac;
   display: table;
   height: 100%;
   position: relative;
@@ -44,6 +57,7 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: #FFF;
 }
 
 #about {
@@ -65,8 +79,8 @@ html, body {
   width: 140px;
 }
 
-#information {
-  background: url(../images/estate.jpg) no-repeat center center fixed; 
+#polar_bear {
+  background: url(../images/polar_bear.png) no-repeat center center fixed;
   display: table;
   height: 800px;
   position: relative;
@@ -76,12 +90,66 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
 }
-#information .panel {
-  opacity: 0.85;
+
+#polar_bear .panel {
+  background-color: rgba(40, 147, 172, .65);
+  border: none;
+  border-radius: 0;
 }
 
-#google_map {
-  height: 500px;
+#walrus {
+  background: url(../images/walrus.png) no-repeat center center fixed;
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#walrus .panel {
+  background-color: rgba(158, 194, 208, .65);
+  border: none;
+  border-radius: 0;
+}
+
+#grizzly {
+  background: url(../images/grizzly.png) no-repeat center center fixed;
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#grizzly .panel {
+  background-color: rgb(129,83,67,.65);
+  border: none;
+  border-radius: 0;
+}
+
+#chart {
+	background-color: #9ec2d0;
+}
+
+.panel-body {
+	color: #FFF;
+	font-size: 2.5rem;
+}
+
+.panel-body h2 {
+	font-size: 5rem;
+    padding-bottom: 2rem;
+}
+
+img#chart {
+	width: 75%;
+	float: right;
 }
 
 footer {
