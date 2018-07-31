@@ -210,6 +210,14 @@ img#chart {
 	float: right;
 }
 
+#footer {
+	text-align: center;
+}
+
+img.footer-logo {
+	padding-bottom: 50px;
+}
+
 footer {
   padding: 20px 0;
 }
