@@ -25,17 +25,47 @@ h1, h2 {
 	width: 100%;
 }
 
+a.btn-lg {
+	margin-top: 3rem;
+	padding: 10px 16px;
+	font-size: 25px;
+	line-height: 1.33;
+	border-radius: 0;
+	font-weight: bold;
+	background: none;
+	border: 5px solid #FFF;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top {
+	border: none;
+	background: #2893ac;
+}
+
+.navbar-default .navbar-brand {
+	display: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #FFF;
+	font-size: 2rem;
+	line-height: 1.428571429;
+}
+
+.navbar-default .navbar-nav>li>a.donate {
+	font-weight: 700;
+	background-color: #f57b20;
+}
+
 /* padded section */
 .pad-section {
   padding: 50px 0;
 }
 .pad-section img {
-  width: 100%;
+  width: 15%;
 }
 
 /* vertical-centered text */
 .text-vcenter {
-  display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
@@ -44,6 +74,29 @@ h1, h2 {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  padding-top: 25px;
+  color: #FFF;
+}
+
+.text-vcenter h3 {
+	color: #FFF;
+}
+
+.center-logo {
+	padding-top: 100px;
+}
+
+#overlay {
+	background: linear-gradient(to bottom, rgb(85, 192, 239) 0%, rgba(84, 192, 239, 0.91) 70%, rgba(88, 194, 239, 0) 100%);
+	position: relative;
+	z-index: 1000;
+	height: 1200px
+}
+
+#overlay h3 {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 /* additional sections */
@@ -82,7 +135,7 @@ h1, h2 {
 #polar_bear {
   background: url(../images/polar_bear.png) no-repeat center center fixed;
   display: table;
-  height: 800px;
+  height: 2050px;
   position: relative;
   width: 100%;
   -webkit-background-size: cover;
@@ -100,7 +153,7 @@ h1, h2 {
 #walrus {
   background: url(../images/walrus.png) no-repeat center center fixed;
   display: table;
-  height: 800px;
+  height: 1000px;
   position: relative;
   width: 100%;
   -webkit-background-size: cover;
@@ -118,7 +171,7 @@ h1, h2 {
 #grizzly {
   background: url(../images/grizzly.png) no-repeat center center fixed;
   display: table;
-  height: 800px;
+  height: 1000px;
   position: relative;
   width: 100%;
   -webkit-background-size: cover;
@@ -135,6 +188,11 @@ h1, h2 {
 
 #chart {
 	background-color: #9ec2d0;
+}
+
+#chart h2 {
+    font-size: 55px;
+	margin-top: 200px;
 }
 
 .panel-body {
