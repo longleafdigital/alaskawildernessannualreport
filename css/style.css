@@ -228,3 +228,61 @@ footer .glyphicon {
 footer .glyphicon:hover {
   color: #306d9f;
 }
+
+#mobile #mobile_title {
+	background: linear-gradient(to bottom, rgb(85, 192, 239) 0%, rgba(84, 192, 239, 0.91) 70%, rgba(88, 194, 239, 0) 100%);
+	text-align: center;
+	padding-bottom: 15rem;
+}
+
+#mobile_title .center-logo {
+	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+	padding-top: 60px;
+}
+
+#mobile_title h3 {
+	font-size: 18px;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+	color: #FFF;
+}
+
+#mobile h1 {
+	font-size: 4rem;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+	color: #FFF;
+}
+
+#mobile img {
+	width: 100%;
+}
+
+.mobile-content-wrapper {
+	background: rgb(85, 192, 239);
+	padding: 5%;
+	color: #FFF;
+}
+
+.mobile-content-wrapper.polar {
+	background: rgb(85, 192, 239);
+}
+
+.mobile-content-wrapper.walrus {
+	background: #9ec2d0;
+}
+
+.mobile-content-wrapper.grizzly {
+	background: #815343;
+}
+
+.mobile-content-wrapper h2 {
+	text-align: center;
+	border-bottom: 2px solid #FFF;
+	padding-bottom: 2%;
+	font-weight: bold;
+}
