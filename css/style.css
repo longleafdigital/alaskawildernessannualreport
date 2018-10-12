@@ -147,7 +147,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 #polar_bear .panel {
-  background-color: rgba(40, 147, 172, .75);
+  background-color: rgba(40, 147, 172);
   border: none;
   border-radius: 0;
 }
@@ -165,7 +165,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 #walrus .panel {
-  background-color: rgba(158, 194, 208, .75);
+  background-color: rgba(105, 140, 154);
   border: none;
   border-radius: 0;
 }
@@ -183,7 +183,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 #grizzly .panel {
-  background-color: rgb(129,83,67,.75);
+  background-color: rgb(129,83,67);
   border: none;
   border-radius: 0;
 }
