@@ -83,7 +83,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 .center-logo {
-	padding-top: 100px;
+	padding-top: 10px;
 }
 
 #overlay {
@@ -93,10 +93,12 @@ nav.navbar.navbar-default.navbar-fixed-top {
 	height: 1200px
 }
 
-#overlay h3 {
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+#overlay p {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+	font-size: 2rem;
+	color: #FFF;
 }
 
 /* additional sections */
@@ -145,7 +147,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 #polar_bear .panel {
-  background-color: rgba(40, 147, 172, .65);
+  background-color: rgba(40, 147, 172, .75);
   border: none;
   border-radius: 0;
 }
@@ -163,7 +165,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 #walrus .panel {
-  background-color: rgba(158, 194, 208, .65);
+  background-color: rgba(158, 194, 208, .75);
   border: none;
   border-radius: 0;
 }
@@ -181,7 +183,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 #grizzly .panel {
-  background-color: rgb(129,83,67,.65);
+  background-color: rgb(129,83,67,.75);
   border: none;
   border-radius: 0;
 }
@@ -197,7 +199,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 
 .panel-body {
 	color: #FFF;
-	font-size: 2.5rem;
+	font-size: 1.75rem;
 }
 
 .panel-body h2 {
