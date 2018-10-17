@@ -13,6 +13,8 @@
   <link href="css/style.css?version=1.1" rel="stylesheet" />
   <!-- FontAwesome CDN -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- Chart.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
   
 </head>
 <body>
@@ -152,7 +154,7 @@
 		<div class="container">
 		  <div class="row">
 			<div class="col-sm-4 text-center">
-			<img id="chart" src="images/pie_chart.png">
+			<canvas id="myChart" width="400" height="400"></canvas>
 			</div>
 			<div class="col-sm-8 text-center text-vcenter">
 			<h2>We Spend 85% on Programs<br>so you know every dollar counts!</h2>
@@ -226,4 +228,62 @@
   <script src="//maps.google.com/maps/api/js?sensor=true"></script>
   <script src="js/main.js"></script>
 </body>
+
+<script>
+function addCommas(nStr) {
+    nStr += '';
+    var x = nStr.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
+
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ["Campaigns", "General & Administrative", "Development"],
+        datasets: [{
+            label: 'Where the money goes',
+            data: [2055770, 266970, 527558],
+            backgroundColor: [
+                'rgba(40, 147, 172, 1)',
+                'rgba(105, 140, 154, 1)',
+                'rgba(129, 83, 67, 1)'
+            ],
+            borderColor: [
+                'rgb(40, 147, 172)',
+                'rgb(105, 140, 154)',
+                'rgb(129, 83, 67)'
+            ],
+            borderWidth: 3
+        }]
+    },
+	options: {
+		tooltips: {
+		  callbacks: {
+			label: function(tooltipItem, data) {
+			  //get the concerned dataset
+			  var dataset = data.datasets[tooltipItem.datasetIndex];
+			  //calculate the total of this data set
+			  var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+				return previousValue + currentValue;
+			  });
+			  //get the current items value
+			  var currentValue = dataset.data[tooltipItem.index];
+			  //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+			  var currency = addCommas(currentValue);
+
+			  return "$" + currency;
+			}
+		  }
+		} 
+	}
+});
+</script>
+
 </html>

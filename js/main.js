@@ -10,6 +10,7 @@
  * http://www.script-tutorials.com/
  */
 
+/*
 $(document).ready(function (){
 
   // create a LatLng object containing the coordinate for the center of the map
@@ -44,3 +45,4 @@ $(document).ready(function (){
     content:  '<div class="info"><strong>This is my company</strong><br><br>My company address is here<br> 32846 Sydney</div>'
   });  
 });
+*/
