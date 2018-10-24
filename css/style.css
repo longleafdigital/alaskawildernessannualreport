@@ -198,8 +198,30 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 #chart h2 {
-    font-size: 55px;
+    font-size: 30px;
 	margin-top: 200px;
+}
+
+#tagline {
+	color: #FFF;
+	background-color: rgb(129,83,67);
+}
+
+#mission {
+	color: #FFF;
+	background-color: rgb(40, 147, 172);
+	height: 250px;
+	padding-left: 15%;
+    padding-right: 15%;
+}
+
+#mission h3 {
+	font-family: 'Laila', serif;
+}
+
+#mission ul li a {
+	color: #FFF;
+	text-decoration: underline;
 }
 
 .panel-body {
@@ -297,4 +319,20 @@ footer p.text-center a {
 	border-bottom: 2px solid #FFF;
 	padding-bottom: 2%;
 	font-weight: bold;
+}
+
+/* pure-table style fixes */
+.pure-table {
+	width: 100%;
+	border: none;
+	font-size: 2.5rem;
+}
+
+.pure-table th {
+	text-align: center;
+	border: none;
+}
+
+.pure-table td {
+	border: none;
 }

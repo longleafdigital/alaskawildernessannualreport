@@ -8,6 +8,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
   
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  
   <!-- attach CSS styles -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css?version=1.1" rel="stylesheet" />
@@ -158,12 +160,101 @@
 			<canvas id="canvas" width="750" height="400"></canvas>
 			</div>
 			<div class="col-sm-6 text-center text-vcenter">
-			<h2>We Spend 85% on Programs<br>so you know every dollar counts!</h2>
+				<table class="pure-table">
+				  <tr>
+					<th style="text-align: left;">Alaska Wilderness League Revenue</th>
+					<th>2017 ($)</th>
+					<th>2016 ($)</th>
+				  </tr>
+				  <tr>
+					<td style="text-align: left;">Foundations</td>
+					<td>1,650,000<br></td>
+					<td>2,030,000</td>
+				  </tr>
+				  <tr>
+					<td style="text-align: left;">Individuals &amp; Corporations</td>
+					<td>1,264,275</td>
+					<td>1,086,149</td>
+				  </tr>
+				  <tr style="border-bottom: 2px solid;">
+					<td style="text-align: left;">Other Revenue</td>
+					<td>187,923</td>
+					<td>269,603</td>
+				  </tr>
+				  <tr>
+					<td style="text-align: left;">Total Revenue</td>
+					<td>3,102,198</td>
+					<td>3,385,752</td>
+				  </tr>
+				</table>
 			</div>
 		  </div>
 		</div>
 	  </div>
 	  <!-- /chart section -->
+	  
+	  <!-- chart section 2 -->
+	  <div id="chart" class="pad-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-sm-6 text-center">
+			<canvas id="canvas_expense" width="750" height="400"></canvas>
+			</div>
+			<div class="col-sm-6 text-center text-vcenter">
+				<table class="pure-table">
+				  <tr>
+					<th style="text-align: left;">Alaska Wilderness League Net Assets</th>
+					<th>2017 ($)</th>
+					<th>2016 ($)</th>
+				  </tr>
+				  <tr>
+					<td style="text-align: left;">Unrestricted Net Assets</td>
+					<td>2,103,409<br></td>
+					<td>1,480,231</td>
+				  </tr>
+				  <tr>
+					<td style="text-align: left;">Temporarily Restricted Net Assets</td>
+					<td>180,458</td>
+					<td>1,540,000</td>
+				  </tr>
+				  <tr style="border-bottom: 2px solid;">
+					<td style="text-align: left;">Total Net Assets</td>
+					<td>2,283,867</td>
+					<td>3,020,231</td>
+				  </tr>
+				  <tr>
+					<td style="text-align: left;">Total Liabilities and Net Assets</td>
+					<td>2,823,933</td>
+					<td>3,106,361</td>
+				  </tr>
+				</table>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <!-- /chart section 2 -->
+	  
+	  <!--tagline section -->
+	  <div id="tagline" class="pad-section">
+		<h2 style="text-align: center;">We Spend 85% on Programs so you know every dollar counts!</h2>
+	  </div>
+	  
+	  <!-- mission section -->
+	  <div id="mission" class="pad-section">
+		<div class="col-sm-6">
+			<h2 style="">Our Mission</h2>
+			<h3>Alaska Wilderness League galvanizes support to secure vital policies that protect and defend America’s last great wild public lands and waters.</h3>
+		</div>
+		
+		<div class="col-sm-6" style="font-size: 2rem;">
+			<ul>
+				<li>A huge thank you to donors like you who make this work possible, including our <a href="http://www.alaskawild.org/2017-donors/">2017 Wild Society.</a></li>
+				<li>To learn more about our Board and Staff, please visit our <a href="http://www.alaskawild.org/who-we-are/board-of-directors/">Board of Directors</a> page as well as our <a href="http://www.alaskawild.org/who-we-are/board-of-directors/">Staff</a> listing. Don’t hesitate to reach out if you have any questions!</li>
+			</ul>
+		</div>
+		
+	  </div>
+	  
   </div>
   
   <!--
@@ -313,6 +404,67 @@ var myPieChart = new Chart(ctx, {
             datalabels: {
 				formatter: function(value, context) {
 					var percentage = (value/2850298)*100
+					return Math.round(percentage) + '%';
+				}
+            }
+        }
+	}
+});
+
+//second chart
+var canvas = document.getElementById("canvas_expense");
+var ctx = canvas.getContext("2d");
+var midX = canvas.width/2;
+var midY = canvas.height/2
+
+Chart.defaults.global.defaultFontColor = '#FFF';
+Chart.defaults.global.defaultFontFamily = "'Laila', serif";
+Chart.defaults.global.defaultFontSize = 22;
+var myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ["Refuge", "Ocean", "Reserve", "Forest"],
+        datasets: [{
+            label: 'Program Expense Breakdown',
+            data: [951505.31, 486899.35, 324676.12, 292689.22],
+            backgroundColor: [
+                'rgba(40, 147, 172, 1)',
+                'rgba(105, 140, 154, 1)',
+                'rgba(129, 83, 67, 1)',
+				'rgba(85, 192, 239, 1)'
+            ],
+            borderColor: [
+                'rgb(40, 147, 172)',
+                'rgb(105, 140, 154)',
+                'rgb(129, 83, 67)',
+				'rgb(85, 192, 239)'
+            ],
+            borderWidth: 3
+        }]
+    },
+	options: {
+		tooltips: {
+		  callbacks: {
+			label: function(tooltipItem, data) {
+			  //get the concerned dataset
+			  var dataset = data.datasets[tooltipItem.datasetIndex];
+			  //calculate the total of this data set
+			  var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+				return previousValue + currentValue;
+			  });
+			  //get the current items value
+			  var currentValue = dataset.data[tooltipItem.index];
+			  //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
+			  var currency = addCommas(currentValue);
+
+			  return "$" + currency;
+			}
+		  }
+		},
+		plugins: {
+            datalabels: {
+				formatter: function(value, context) {
+					var percentage = (value/2055770)*100
 					return Math.round(percentage) + '%';
 				}
             }
