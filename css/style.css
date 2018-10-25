@@ -193,6 +193,24 @@ nav.navbar.navbar-default.navbar-fixed-top {
   border-radius: 0;
 }
 
+#protections {
+  background: url(../images/owl.jpg) no-repeat center center fixed;
+  display: table;
+  height: 1000px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#protections .panel {
+  background-color: rgb(40, 147, 172);
+  border: none;
+  border-radius: 0;
+}
+
 #chart {
 	background-color: #9ec2d0;
 }
@@ -200,6 +218,12 @@ nav.navbar.navbar-default.navbar-fixed-top {
 #chart h2 {
     font-size: 30px;
 	margin-top: 200px;
+}
+
+#chart h2.finance {
+	text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5%;
 }
 
 #tagline {
