@@ -239,6 +239,14 @@ nav.navbar.navbar-default.navbar-fixed-top {
     padding-right: 15%;
 }
 
+@media only screen and (max-width: 768px) {
+	#mission {
+		height: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 #mission h3 {
 	font-family: 'Laila', serif;
 }
@@ -351,6 +359,12 @@ footer p.text-center a {
 	border: none;
 	font-size: 2.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+	.pure-table {
+		font-size: 1.5rem;
+	}
+} 
 
 .pure-table th {
 	text-align: center;
